@@ -12,7 +12,7 @@ This project serves as a practical, end-to-end example of building a modern AI a
 ## 🎥 Demo
 
 
-![PDF-Pal Demo](./docs/demo.gif)
+![PDF-Pal Demo](./docs/demo.jpg)
 *A quick look at the user interface.*
 
 ---
