@@ -108,7 +108,7 @@ graph TD
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YourUsername/pdf-qa-chatbot.git](https://github.com/YourUsername/pdf-qa-chatbot.git)
+    git clone [https://github.com/Nayasamundhra/pdf-qa-chatbot.git](https://github.com/Nayasamundhra/pdf-qa-chatbot.git)
     cd pdf-qa-chatbot
     ```
 
