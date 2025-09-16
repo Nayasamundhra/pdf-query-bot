@@ -33,19 +33,19 @@ This application is built on a modern RAG pipeline. The diagram below illustrate
 
 ```mermaid
 graph TD
-    subgraph Frontend (Streamlit)
+    subgraph "Frontend: Streamlit"
         A[User uploads PDF] --> B{Process PDF};
         C[User asks question] --> D{Submit Query};
     end
 
-    subgraph Backend (FastAPI)
+    subgraph "Backend: FastAPI"
         E[/upload_pdf/ endpoint]
         F[/ask/ endpoint]
         G[LangChain RAG Pipeline]
         H[FAISS Vector Store]
     end
 
-    subgraph Local AI (Ollama)
+    subgraph "Local AI: Ollama"
         I[OllamaEmbeddings]
         J[OllamaLLM: Llama 2]
     end
@@ -54,15 +54,16 @@ graph TD
     D --> F;
 
     E --> G;
-    G -- 1. Chunks & Embeds --> I;
-    I -- 2. Creates Vectors --> H;
+    G -- "1. Chunks & Embeds" --> I;
+    I -- "2. Creates Vectors" --> H;
 
-    F -- 3. Embeds Query --> I;
-    F -- 4. Similarity Search --> H;
-    H -- 5. Retrieves Relevant Chunks --> G;
-    G -- 6. Augments Prompt --> J;
-    J -- 7. Generates Answer --> F;
-    F -- 8. Returns Answer --> D;
+    F -- "3. Embeds Query" --> I;
+    F -- "4. Similarity Search" --> H;
+    H -- "5. Retrieves Relevant Chunks" --> G;
+    G -- "6. Augments Prompt" --> J;
+    J -- "7. Generates Answer" --> F;
+    F -- "8. Returns Answer" --> D;
+
 ```
 
 ### The RAG Pipeline in Detail:
